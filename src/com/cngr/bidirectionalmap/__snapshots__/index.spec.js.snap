@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BiDirectionalMap #constructor 1`] = `
+Map {
+  "bob" => "larry",
+  "larry" => "bob",
+  "tim" => "tom",
+  "tom" => "tim",
+}
+`;
+
+exports[`BiDirectionalMap #set 1`] = `
+Map {
+  "bob" => "larry",
+  "larry" => "bob",
+  "tim" => "tom",
+  "tom" => "tim",
+}
+`;

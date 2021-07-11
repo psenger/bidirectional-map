@@ -1,0 +1,27 @@
+{
+  "name": "bidirectional-map",
+  "version": "1.0.0",
+  "description": "Bi Directional Map ( BIDI Map )",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "rollup --config",
+    "clean": "rimraf ./coverage ./build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psenger/bidirectional-map.git"
+  },
+  "author": "Philip A Senger <philip.a.senger@cngrgroup.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psenger/bidirectional-map/issues"
+  },
+  "homepage": "https://github.com/psenger/bidirectional-map#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "jest": "^27.0.6",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.53.1"
+  }
+}
