@@ -1,5 +1,5 @@
 {
-  "name": "bidirectional-map",
+  "name": "@psenger/bidirectional-map",
   "version": "1.0.0",
   "description": "Bi Directional Map ( BIDI Map )",
   "main": "dist/index.js",
