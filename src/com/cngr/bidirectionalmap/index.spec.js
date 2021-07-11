@@ -10,4 +10,9 @@ describe('BiDirectionalMap',()=>{
         bidiMap.set('bob', 'larry').set('tim', 'tom')
         expect(bidiMap).toMatchSnapshot();
     })
+  test('#set with override',()=>{
+    const bidiMap =  new BiDirectionalMap();
+    bidiMap.set('bob', 'larry').set('bob', 'kim')
+    expect(bidiMap).toMatchSnapshot();
+  })
 })

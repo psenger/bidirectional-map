@@ -12,7 +12,16 @@ class BiDirectionalMap extends Map {
     }
 
     set(key,value) {
-        // set(key: K, value: V): this;
+        // 1.) remove any existing relationships
+        if ( super.has(key) || super.has(value) ) {
+          const a = super.get(key);
+          const b = super.get(value);
+          super.delete(a);
+          super.delete(b);
+          super.delete(key);
+          super.delete(value);
+        }
+        // 2.) now set the relationship
         super.set(key,value);
         super.set(value,key);
         return this;

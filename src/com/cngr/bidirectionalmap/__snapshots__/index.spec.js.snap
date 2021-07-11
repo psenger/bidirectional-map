@@ -2,10 +2,10 @@
 
 exports[`BiDirectionalMap #constructor 1`] = `
 Map {
-  "bob" => "larry",
   "larry" => "bob",
-  "tim" => "tom",
+  "bob" => "larry",
   "tom" => "tim",
+  "tim" => "tom",
 }
 `;
 
@@ -15,5 +15,12 @@ Map {
   "larry" => "bob",
   "tim" => "tom",
   "tom" => "tim",
+}
+`;
+
+exports[`BiDirectionalMap #set with override 1`] = `
+Map {
+  "bob" => "kim",
+  "kim" => "bob",
 }
 `;
