@@ -2,11 +2,17 @@
   "name": "bidirectional-map",
   "version": "1.0.0",
   "description": "Bi Directional Map ( BIDI Map )",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "source": "src/com/cngr/bidirectionalmap/index.js",
   "scripts": {
     "test": "jest",
+    "test:updatesnaphot": "jest --updateSnapshot",
+    "test:lint": "eslint .",
     "build": "rollup --config",
-    "clean": "rimraf ./coverage ./build"
+    "clean": "rimraf ./coverage ./dist"
+  },
+  "engines": {
+    "node": ">=10"
   },
   "repository": {
     "type": "git",
@@ -20,6 +26,7 @@
   "homepage": "https://github.com/psenger/bidirectional-map#readme",
   "devDependencies": {
     "@types/jest": "^26.0.24",
+    "eslint": "^7.30.0",
     "jest": "^27.0.6",
     "rimraf": "^3.0.2",
     "rollup": "^2.53.1"
