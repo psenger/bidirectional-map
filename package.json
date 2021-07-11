@@ -18,6 +18,9 @@
     "type": "git",
     "url": "git+https://github.com/psenger/bidirectional-map.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "author": "Philip A Senger <philip.a.senger@cngrgroup.com>",
   "license": "ISC",
   "bugs": {

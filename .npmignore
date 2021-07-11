@@ -1,0 +1,10 @@
+.DS_Store
+.git
+.npmrc
+.nvmrc
+.eslintrc.js
+.editorconfig
+jest.config.js
+rollup.config.js
+src
+.idea
