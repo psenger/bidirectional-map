@@ -13,7 +13,10 @@
     "prebuild": "npm run clean",
     "clean": "rimraf coverage dist",
     "docs": "documentation build src -f html --github -o docs",
-    "precommit": "npm test:lint && npm test"
+    "precommit": "npm test:lint && npm test",
+    "preversion": "npm test",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags && rm -rf build/temp"
   },
   "engines": {
     "node": ">=10"
