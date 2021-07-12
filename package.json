@@ -35,7 +35,7 @@
     "registry": "https://npm.pkg.github.com"
   },
   "author": "Philip A Senger <philip.a.senger@cngrgroup.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/psenger/bidirectional-map/issues"
   },
