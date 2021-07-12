@@ -1,19 +1,29 @@
 {
   "name": "@psenger/bidirectional-map",
   "version": "1.0.0",
-  "description": "Bi Directional Map ( BIDI Map )",
+  "description": "Bi Directional Map ( BIDI Map ) for NodeJS",
   "main": "dist/index.js",
   "source": "src/com/cngr/bidirectionalmap/index.js",
   "scripts": {
-    "test": "jest",
-    "test:updatesnaphot": "jest --updateSnapshot",
-    "test:lint": "eslint .",
+    "test": "jest --coverage --verbose src",
+    "test:cover": "jest src --coverage",
+    "test:lint": "eslint src",
+    "test:updatesnapshot": "jest --updateSnapshot",
     "build": "rollup --config",
-    "clean": "rimraf ./coverage ./dist"
+    "prebuild": "npm run clean",
+    "clean": "rimraf coverage dist",
+    "docs": "documentation build src -f html --github -o docs",
+    "precommit": "npm test:lint && npm test"
   },
   "engines": {
     "node": ">=10"
   },
+  "directories": {
+    "example": "example"
+  },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/psenger/bidirectional-map.git"
@@ -26,9 +36,19 @@
   "bugs": {
     "url": "https://github.com/psenger/bidirectional-map/issues"
   },
+  "keywords": [
+    "bidirectionalmap",
+    "bidirectional",
+    "bi-directional",
+    "bi-directional-map",
+    "bidi",
+    "bidi map",
+    "adt"
+  ],
   "homepage": "https://github.com/psenger/bidirectional-map#readme",
   "devDependencies": {
     "@types/jest": "^26.0.24",
+    "documentation": "^13.2.5",
     "eslint": "^7.30.0",
     "jest": "^27.0.6",
     "rimraf": "^3.0.2",
