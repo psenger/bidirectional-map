@@ -4,20 +4,22 @@
 'use strict'
 
 /**
- * @module bidirectionalmap
- * @type {BiDirectionalMap}
+ * Bi Directional Map - A Map, in which the keys and values are registered pointing to each
+ * other. EG A->B and B->A
+ * @param {Iterable} [props] - An Iterable object whose elements are key-value pairs (arrays with two elements, e.g. [[ 1, ['one','two'] ],[ 2, ['three'] ]]). Each key-value pair is added to the new Map; null values are treated as undefined.
+ * @constructs BiDirectionalMap
+ * @class {BiDirectionalMap}
  */
-module.exports = class BiDirectionalMap extends Map {
-  // Overwrite MyMap species to the parent Map constructor
+class BiDirectionalMap extends Map {
+
+  /**
+   * Overwrite BiDirectionalMap species to the parent Map constructor
+   * @return {MapConstructor}
+   */
   static get [Symbol.species]() {
     return Map;
   }
 
-  /**
-   * Constructor, with optional initial state of iterable.
-   *
-   * @param [iterable] - An Array or other iterable object whose elements are key-value pairs (arrays with two elements, e.g. [[ 1, ['one','two'] ],[ 2, ['three'] ]]). Each key-value pair is added to the new Map; null values are treated as undefined.
-   */
   constructor(props) {
     super(props);
     if (props && typeof props[Symbol.iterator] === 'function') {
@@ -28,10 +30,12 @@ module.exports = class BiDirectionalMap extends Map {
   }
 
   /**
-   * Sets the value for the key in the Map object. Returns the Map object.
-   * @param key
-   * @param value
-   * @returns {module.BiDirectionalMap}
+   * Sets the value for the key in the Map object. Overriding the parent `set` and returns the Map
+   * object. Only works with `String` or `Numbers.
+   * @override
+   * @param {string|number} key - The key of the element to add to the `BiDirectionalMap` object.
+   * @param {string|number} value - The value of the element to add to the `BiDirectionalMap` object.
+   * @returns {BiDirectionalMap}
    */
   set(key, value) {
     // 1.) remove any existing relationships
@@ -49,3 +53,5 @@ module.exports = class BiDirectionalMap extends Map {
     return this;
   }
 }
+
+module.exports = BiDirectionalMap;

@@ -18,8 +18,9 @@
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags && rm -rf build/temp"
   },
+  "engineStrict": true,
   "engines": {
-    "node": ">=10"
+    "node": ">=15"
   },
   "directories": {
     "example": "example"

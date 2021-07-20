@@ -9,18 +9,34 @@ Map {
 }
 `;
 
-exports[`BiDirectionalMap #set 1`] = `
+exports[`BiDirectionalMap #set with number - override 1`] = `
+Map {
+  1 => 3,
+  3 => 1,
+}
+`;
+
+exports[`BiDirectionalMap #set with number 1`] = `
+Map {
+  1 => 2,
+  2 => 1,
+  3 => 4,
+  4 => 3,
+}
+`;
+
+exports[`BiDirectionalMap #set with string - override 1`] = `
+Map {
+  "bob" => "kim",
+  "kim" => "bob",
+}
+`;
+
+exports[`BiDirectionalMap #set with string 1`] = `
 Map {
   "bob" => "larry",
   "larry" => "bob",
   "tim" => "tom",
   "tom" => "tim",
-}
-`;
-
-exports[`BiDirectionalMap #set with override 1`] = `
-Map {
-  "bob" => "kim",
-  "kim" => "bob",
 }
 `;
