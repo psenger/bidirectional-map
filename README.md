@@ -18,7 +18,7 @@ Type: [BiDirectionalMap][2]
 
 **Meta**
 
-*   **version**: 1.0.4
+*   **version**: 1.0.5
 
 ### set
 
@@ -67,6 +67,21 @@ for( let [Key,Value] of bidiMap.entries()){
 // Key(2) = Value(1)
 // Key(3) = Value(4)
 // Key(4) = Value(3)
+```
+
+## Installation Instructions
+
+This project, hosted alternatively in GitHub, not NPM, requires you append the following to a
+project level file `./.npmrc`
+
+```
+@psenger:registry=https://npm.pkg.github.com
+```
+
+Once completed, you can then execute either `npm` or `yarn` to install.
+
+```bash
+npm install @psenger/bidirectional-map --save
 ```
 
 ## Deployment Steps
