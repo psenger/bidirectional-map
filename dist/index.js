@@ -8,7 +8,7 @@
  * Bi Directional Map is a Map, in which the keys and values are registered pointing to each
  * other ( a binary relationship ). EG A->B and B->A. This is a Advanced Data Type and is some times
  * called an Associative Data Structure.
- * @version 1.0.4
+ * @version 1.0.5
  * @see {@link https://en.wikipedia.org/wiki/Bidirectional_map|wikipedia} for further information
  * @param {Iterable} [props] - An Iterable object whose elements are key-value pairs (arrays with two elements, e.g. [[ 1, ['one','two'] ],[ 2, ['three'] ]]). Each key-value pair is added to the new Map; null values are treated as undefined.
  * @constructs BiDirectionalMap
