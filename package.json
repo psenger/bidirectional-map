@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "source": "src/com/cngr/bidirectionalmap/index.js",
   "scripts": {
-    "ci": "jest --ci --coverage && codecov",
+    "ci": "npm install && jest --ci --coverage && codecov",
     "test": "jest --coverage --verbose src",
     "test:cover": "jest src --coverage",
     "test:lint": "eslint src",
