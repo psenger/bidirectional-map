@@ -18,8 +18,8 @@
         * [Parameters](#parameters-1)
       - [species](#species)
   * [Example Usage](#example-usage)
-  * [License](#license)
   * [Deployment Steps](#deployment-steps)
+  * [License](#license)
 
 <!--END_SECTION:toc-->
 
@@ -116,6 +116,19 @@ for( let [Key,Value] of bidiMap.entries()){
 
 <!--END_SECTION:file:TUTORIAL.md-->
 
+## Deployment Steps
+
+These are notes for deploying to NPM. I used `npmrc` to manage my NPM identities
+(`npm i npmrc -g` to install ). Then I created a new profile called `public` with
+(`npmrc -c public`) and then switch to it with `npmrc public`.
+
+* create a pull request from `dev` to `main`
+* check out `main`
+* `npm version patch -m "message here" or minor`
+* `npm publish --access public`
+* Then switch to `dev` branch
+* And then merge `main` into `dev` and push `dev` to origin
+
 ## License
 
 <!--START_SECTION:file:LICENSE-->
@@ -143,15 +156,4 @@ SOFTWARE.
 
 <!--END_SECTION:file:LICENSE-->
 
-## Deployment Steps
-
-These are notes for deploying to NPM. I used `npmrc` to manage my NPM identities
-(`npm i npmrc -g` to install ). Then I created a new profile called `public` with
-(`npmrc -c public`) and then switch to it with `npmrc public`.
-
-* create a pull request from `dev` to `main`
-* check out `main`
-* `npm version patch -m "message here" or minor`
-* `npm publish --access public`
-* Then switch to `dev` branch
-* And then merge `main` into `dev` and push `dev` to origin
+MIT © [psenger](https://github.com/psenger)
