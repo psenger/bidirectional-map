@@ -146,6 +146,6 @@ SOFTWARE.
 * create a pull request from `dev` to `main`
 * check out `main`
 * `npm version patch -m "message here" or minor`
-* `npm publish`
+* `npm publish --access public`
 * Then switch to `dev` branch
 * And then merge `main` into `dev` and push `dev` to origin
