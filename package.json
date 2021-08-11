@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "source": "src/com/cngr/bidirectionalmap/index.js",
   "scripts": {
+    "ci": "npm install --verbose && jest --ci --coverage && codecov",
     "test": "jest --coverage --verbose src",
     "test:cover": "jest src --coverage",
     "test:lint": "eslint src",
@@ -32,9 +33,7 @@
     "type": "git",
     "url": "git+https://github.com/psenger/bidirectional-map.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
+  "private": false,
   "author": "Philip A Senger <philip.a.senger@cngrgroup.com>",
   "license": "MIT",
   "bugs": {
@@ -51,11 +50,16 @@
   ],
   "homepage": "https://github.com/psenger/bidirectional-map#readme",
   "devDependencies": {
+    "@psenger/markdown-fences": "^1.0.0",
     "@types/jest": "^26.0.24",
-    "documentation": "^13.2.5",
+    "codecov": "^3.8.3",
     "eslint": "^7.30.0",
     "jest": "^27.0.6",
     "rimraf": "^3.0.2",
     "rollup": "^2.53.1"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
