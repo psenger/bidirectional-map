@@ -1,7 +1,7 @@
 ## Installation Instructions
 
 ```bash
-npm install @psenger/bidirectional-map --save
+npm install @psenger/bidirectional-map--save
 ```
 
 or

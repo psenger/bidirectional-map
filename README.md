@@ -4,10 +4,13 @@
 > relationship. The binary relation is functional in both direction: each value is mapped to a
 > unique key.
 
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
 <!--START_SECTION:toc-->
 
 ## Table of contents
 - [Bidirectional Map](#bidirectional-map)
+  * [Installation Instructions](#installation-instructions)
   * [API](#api)
     + [BiDirectionalMap](#bidirectionalmap)
       - [Parameters](#parameters)
@@ -15,11 +18,25 @@
         * [Parameters](#parameters-1)
       - [species](#species)
   * [Example Usage](#example-usage)
-  * [Installation Instructions](#installation-instructions)
   * [License](#license)
   * [Deployment Steps](#deployment-steps)
 
 <!--END_SECTION:toc-->
+
+<!--START_SECTION:file:INSTALLATION.md-->
+## Installation Instructions
+
+```bash
+npm install @psenger/bidirectional-map--save
+```
+
+or
+
+```bash
+yarn add @psenger/bidirectional-map
+```
+
+<!--END_SECTION:file:INSTALLATION.md-->
 
 <!--START_SECTION:jsdoc-->
 ## API
@@ -56,13 +73,13 @@ object. Only works with `String` or \`Numbers.
 *   `key` **([string][3] | [number][4])** The key of the element to add to the `BiDirectionalMap` object.
 *   `value` **([string][3] | [number][4])** The value of the element to add to the `BiDirectionalMap` object.
 
-Returns **[BiDirectionalMap][2]**
+Returns **[BiDirectionalMap][2]** 
 
 #### species
 
 Overwrite BiDirectionalMap species to the parent Map constructor
 
-Returns **MapConstructor**
+Returns **MapConstructor** 
 
 [1]: https://en.wikipedia.org/wiki/Bidirectional_map
 
@@ -99,21 +116,6 @@ for( let [Key,Value] of bidiMap.entries()){
 
 <!--END_SECTION:file:TUTORIAL.md-->
 
-<!--START_SECTION:file:INSTALLATION.md-->
-## Installation Instructions
-
-```bash
-npm install @psenger/bidirectional-map --save
-```
-
-or
-
-```bash
-yarn add @psenger/bidirectional-map
-```
-
-<!--END_SECTION:file:INSTALLATION.md-->
-
 ## License
 
 <!--START_SECTION:file:LICENSE-->
@@ -142,6 +144,10 @@ SOFTWARE.
 <!--END_SECTION:file:LICENSE-->
 
 ## Deployment Steps
+
+These are notes for deploying to NPM. I used `npmrc` to manage my NPM identities
+(`npm i npmrc -g` to install ). Then I created a new profile called `public` with
+(`npmrc -c public`) and then switch to it with `npmrc public`.
 
 * create a pull request from `dev` to `main`
 * check out `main`
