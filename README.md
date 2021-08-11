@@ -56,13 +56,13 @@ object. Only works with `String` or \`Numbers.
 *   `key` **([string][3] | [number][4])** The key of the element to add to the `BiDirectionalMap` object.
 *   `value` **([string][3] | [number][4])** The value of the element to add to the `BiDirectionalMap` object.
 
-Returns **[BiDirectionalMap][2]** 
+Returns **[BiDirectionalMap][2]**
 
 #### species
 
 Overwrite BiDirectionalMap species to the parent Map constructor
 
-Returns **MapConstructor** 
+Returns **MapConstructor**
 
 [1]: https://en.wikipedia.org/wiki/Bidirectional_map
 
@@ -102,17 +102,14 @@ for( let [Key,Value] of bidiMap.entries()){
 <!--START_SECTION:file:INSTALLATION.md-->
 ## Installation Instructions
 
-This project, hosted alternatively in GitHub, not NPM, requires you append the following to a
-project level file `./.npmrc`
-
-```
-@psenger:registry=https://npm.pkg.github.com
-```
-
-Once completed, you can then execute either `npm` or `yarn` to install.
-
 ```bash
 npm install @psenger/bidirectional-map --save
+```
+
+or
+
+```bash
+yarn add @psenger/bidirectional-map
 ```
 
 <!--END_SECTION:file:INSTALLATION.md-->
