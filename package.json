@@ -1,6 +1,6 @@
 {
   "name": "@psenger/bidirectional-map",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Bi Directional Map ( BIDI Map ) for NodeJS",
   "main": "dist/index.js",
   "source": "src/com/cngr/bidirectionalmap/index.js",
