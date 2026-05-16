@@ -7,6 +7,7 @@ const {generateMarkDownFile} = require('@psenger/markdown-fences');
     join( __dirname, '.README.md'),
     join( __dirname, 'README.md'),
     join( __dirname ),
-    [join(__dirname, 'src', 'com', 'cngr', 'bidirectionalmap', 'index.js')]
+    [join(__dirname, 'src', 'com', 'cngr', 'bidirectionalmap', 'index.js')],
+  { 'heading-depth': 3 }
   );
 })()
