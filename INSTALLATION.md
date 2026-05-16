@@ -1,4 +1,4 @@
-## Installation Instructions
+## Installation
 
 ```bash
 npm install @psenger/bidirectional-map--save
