@@ -8,12 +8,12 @@
     "ci": "npm install --verbose && jest --ci --coverage && codecov",
     "test": "jest --coverage --verbose src",
     "test:cover": "jest src --coverage",
-    "test:lint": "eslint src",
+    "test:lint": "standard --env jest \"src/com/cngr/bidirectionalmap/*.js\"",
     "test:updatesnapshot": "jest --updateSnapshot",
-    "build": "rollup --config",
+    "build": "rollup --config && npm run docs",
     "prebuild": "npm run clean",
     "clean": "rimraf coverage dist",
-    "docs": "node build-readme.js && documentation build src -f html --github -o docs",
+    "docs": "node build-readme.js",
     "precommit": "npm test:lint && npm test",
     "preversion": "npm test",
     "version": "npm run build && git add -A dist",
@@ -21,7 +21,7 @@
   },
   "engineStrict": true,
   "engines": {
-    "node": ">=15"
+    "node": ">=22"
   },
   "directories": {
     "example": "example"
@@ -51,15 +51,19 @@
   "homepage": "https://github.com/psenger/bidirectional-map#readme",
   "devDependencies": {
     "@psenger/markdown-fences": "^1.0.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
     "@types/jest": "^26.0.24",
     "codecov": "^3.8.3",
     "eslint": "^7.30.0",
     "jest": "^27.0.6",
     "rimraf": "^3.0.2",
-    "rollup": "^2.53.1"
+    "rollup": "^2.80.0"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
+  },
+  "dependencies": {
+    "standard": "^16.0.3"
   }
 }

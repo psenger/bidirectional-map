@@ -15,19 +15,18 @@
  * @class {BiDirectionalMap}
  */
 class BiDirectionalMap extends Map {
-
   /**
    * Overwrite BiDirectionalMap species to the parent Map constructor
    * @return {MapConstructor}
    */
-  static get [Symbol.species]() {
-    return Map;
+  static get [Symbol.species] () {
+    return Map
   }
 
-  constructor(props) {
+  constructor (props) {
     super(props);
     if (props && typeof props[Symbol.iterator] === 'function') {
-      for (let [key, value] of props) {
+      for (const [key, value] of props) {
         this.set(value, key);
       }
     }
@@ -41,7 +40,7 @@ class BiDirectionalMap extends Map {
    * @param {string|number} value - The value of the element to add to the `BiDirectionalMap` object.
    * @returns {BiDirectionalMap}
    */
-  set(key, value) {
+  set (key, value) {
     // 1.) remove any existing relationships
     if (super.has(key) || super.has(value)) {
       const a = super.get(key);
@@ -54,7 +53,7 @@ class BiDirectionalMap extends Map {
     // 2.) now set the relationship
     super.set(key, value);
     super.set(value, key);
-    return this;
+    return this
   }
 }
 
