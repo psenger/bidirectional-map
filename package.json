@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "source": "src/com/cngr/bidirectionalmap/index.js",
   "scripts": {
-    "ci": "npm install --verbose && jest --ci --coverage && codecov",
+    "ci": "npm install --verbose && jest --ci --coverage",
     "test": "jest --coverage --verbose src",
     "test:cover": "jest src --coverage",
     "test:lint": "standard --env jest \"src/com/cngr/bidirectionalmap/*.js\"",
@@ -52,16 +52,11 @@
   "devDependencies": {
     "@psenger/markdown-fences": "^1.0.0",
     "@rollup/plugin-commonjs": "^20.0.0",
-    "@types/jest": "^26.0.24",
-    "codecov": "^3.8.3",
+    "@types/jest": "^29.0.0",
     "eslint": "^7.30.0",
-    "jest": "^27.0.6",
+    "jest": "^29.0.0",
     "rimraf": "^3.0.2",
     "rollup": "^2.80.0"
-  },
-  "jest": {
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
   },
   "dependencies": {
     "standard": "^16.0.3"
